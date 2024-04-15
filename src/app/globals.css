@@ -73,6 +73,9 @@ li{
   background-color: var(--green-color);
   padding: 9px 25px;
   font-family: 'Poppins';
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 400;
   position: relative;
   z-index: 1;

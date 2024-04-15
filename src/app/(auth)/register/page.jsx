@@ -7,8 +7,9 @@ import React, { useState } from 'react'
 import { redirect, useRouter } from "next/navigation";
 
 const Page = () => {
-
     const router = useRouter();
+    
+    const [loading,setLoading] = useState(false)
 
     const [formData, setFormData] = useState({
         // companyName: '',
@@ -30,9 +31,11 @@ const Page = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true)
          // Basic validation - check if form data is not empty
     if (!formData.name || !formData.password || !formData.email) {
         toast.error('Please fill in all required fields.');
+        setLoading(false)
         return;
     }
 
@@ -49,19 +52,24 @@ const Page = () => {
                 // Registration successful, handle accordingly
                 if (response.data.status === 200) {
                     toast.success(response.data.message);
+                    setLoading(false)
                     router.push('/login');
                 } else if (response.data.status === 400) {
+                    setLoading(false)
                     toast.error(response.data.message);
                 } else {
                     // Registration failed, handle error
+                    setLoading(false)
                     console.error('Registration failed');
                 }
             } else {
                 // Registration failed, handle error
+                setLoading(false)
                 console.error('Registration failed');
             }
         } catch (error) {
-            console.error('Error registering:', error.message);
+            setLoading(false)
+            // console.error('Error registering:', error.message);
         }
     };
     return (
@@ -124,7 +132,7 @@ const Page = () => {
                         </div>
 
                         <div className='flex flex-col gap-4 items-center justify-start w-full'>
-                            <button className='w-full px-7 py-3 bg-blue-900 hover:bg-blue-700 duration-300 text-white rounded-lg font-poppins text-[16px] xll:text-[18px] font-medium tracking-wide'>Register</button>
+                            <button disabled={loading} className={`w-full px-7 py-3 hover:bg-blue-700 duration-300 text-white rounded-lg font-poppins text-[16px] xll:text-[18px] font-medium tracking-wide ${loading ? 'bg-blue-900 opacity-50'  : 'bg-blue-900'}`}>Register</button>
 
                             <p>Alredy Have Account <Link className='font-semibold hover:text-blue-900 text-green' href='/login'>Login </Link></p>
                         </div>

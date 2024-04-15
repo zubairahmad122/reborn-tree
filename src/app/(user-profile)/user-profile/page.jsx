@@ -4,8 +4,11 @@ import { redirect } from "next/navigation";
 import Image from 'next/image'
 import Link from 'next/link'
 import { parseCookies } from 'nookies'
-
 const Page = () => {
+
+
+
+ 
 
   const cookies = parseCookies();
   const name = cookies?.user_name;

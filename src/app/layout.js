@@ -6,6 +6,7 @@ import Head from 'next/head'
 import { usePathname } from 'next/navigation';
 import BgNavbar from '@/components/BgNavbar';
 import { Toaster } from "react-hot-toast";
+import { UserProvider } from '../../lib/UserConext'
 
 
 
@@ -51,12 +52,16 @@ const path = usePathname();
 
       <body  >
 
+        <UserProvider>
+
+
         {path === '/' || path === '/for-Business' || path === "/tree-planting" || path === '/Register' || path === "/Login" || path === "/Reset-password" || path === '/Forget-password' ? <Navbar /> : <BgNavbar />}
         <Toaster position="center-right" />
 
 
           {children}
           <Footer />
+        </UserProvider>
 
        
       </body>

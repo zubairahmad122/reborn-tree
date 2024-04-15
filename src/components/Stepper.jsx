@@ -96,7 +96,7 @@ export default function StepperComp() {
 
                         <div className=' h-full rounded-br-lg rounded-bl-lg  lg:rounded-bl-none lg:rounded-e-lg  gre-card w-full  sm:w-[80%] mdd:w-[60%] py-16 lg:flex-1  flex items-center justify-center flex-col'>
                             <div className='w-full h-full xsm:w-10/12 lg:flex-1 flex items-center text-center lg:text-start lg:items-start  justify-center flex-col'>
-                            <p><FaGlobeAfrica className='text-white my-6 stepicon ' size={35} /></p>s
+                            <p><FaGlobeAfrica className='text-white my-6 stepicon ' size={35} /></p>
                                 <h3 className=' text-center lg:text-left mb-[20px] font-poppins text-[25px] xsm:text-[30px] lg:text-[35px] xll:text-[40px] font-[500] text-white'>
                                 Offset your business
                                 </h3>

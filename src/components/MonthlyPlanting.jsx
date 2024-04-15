@@ -1,35 +1,76 @@
 'use client'
 
+import axios from "axios";
 import Image from "next/image";
+import { redirect } from "next/navigation";
+import { parseCookies } from "nookies";
 import { useEffect, useState } from "react"
+import toast from "react-hot-toast";
+import { useRouter } from 'next/navigation';
+import { loadStripe } from '@stripe/stripe-js';
+
+
 
 const MonthlyPlanting = ({ month }) => {
+
+
+    const stripePromise = loadStripe('pk_test_51P04IEFuASpzJP3Vnfivb5m5sBP5kWHqovoCzBEd2dceKS0au8CwoyzkZ8buLf3S5VECNDl4JM8MXFpTTZvHhZ6j00QT355vjk');
+
+    const router = useRouter()
+    const [stripeId,setStripeId] = useState(null)
+
+    const cookies = parseCookies();
+
+    const accessToken = cookies?.access_token;
 
     const [treeInp, setTreeInp] = useState(0);
     const [disable, setDiable] = useState(true);
 
-    const cardData = [
-        {
-            img: '/assets/images/aboutmain.jpg',
-            title: '0 trees',
-            des: 'Planted',
-        },
-        {
-            img: '/assets/images/tonnes.jpg',
-            title: '0.00 tonnes',
-            des: 'CO2 absorbed by your trees across their lifetime',
-        },
-        {
-            img: '/assets/images/farmer.jpg',
-            title: '<1 workday',
-            des: 'Created for local communities',
-        },
-        {
-            img: '/assets/images/reforest.jpg',
-            title: '0.00 ㎡',
-            des: 'Land reforested',
-        },
-    ]
+
+    const handle = async () => {
+      if(treeInp === 0){
+        toast.error("Please select a tree plan");
+      }else if(!accessToken){
+        router.push('/login')
+      }
+      else{
+        try {
+            const apiUrl = process.env.API_URL;
+    
+            // Assume you already have the accessToken available
+    
+            const authenticatedResponse = await axios.post(`${apiUrl}/order`, {
+                unit_cost: "5",
+                tree_count: treeInp
+            }, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${accessToken}`
+                }
+            });
+    
+            if (authenticatedResponse.status === 200) {
+                redirectToStripe(authenticatedResponse.data.data.id);
+                setStripeId(authenticatedResponse.data.data.id)
+            } else {
+                // Handle error response
+                toast.error('Request failed');
+            }
+        } catch (error) {
+            // Handle error
+            toast.error('Request failed:', error.message);
+            console.log(error)
+        }
+      }
+    }
+
+
+    const redirectToStripe = async (sessionId) => {
+        const stripe = await stripePromise;
+        await stripe.redirectToCheckout({ sessionId });
+    };
+    
+
 
     useEffect(() => {
         if (treeInp < 1) {
@@ -70,13 +111,13 @@ const MonthlyPlanting = ({ month }) => {
                     </div>
                     <div className="flex my-10 items-center justify-between w-full">
                         <p className="font-semibold text-[16px] xsm:text-[20px] sm:text-[30px] text-white">Total: £ {treeInp}.00 / {month && 'month'}</p>
-                        <button disabled={treeInp === 0} className={` ${disable ? 'bg-[#14a80050]' : 'bg-green'} px-4 xsm:px-6 sm:px-10 md:px-14 text-[14px] md:text-[18px]  py-3 rounded-sm text-white font-semibold font-worksans tracking-wide`}>Continus</button>
+                        <button disabled={treeInp === 0} onClick={handle} className={` ${disable ? 'bg-[#14a80050]' : 'bg-green'} px-4 xsm:px-6 sm:px-10 md:px-14 text-[14px] md:text-[18px]  py-3 rounded-sm text-white font-semibold font-worksans tracking-wide`}>Continus</button>
                     </div>
                 </div>
 
             </section>
 
-          
+
         </div>
     )
 }

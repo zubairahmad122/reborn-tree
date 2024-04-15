@@ -9,7 +9,7 @@ import { redirect, useRouter } from 'next/navigation';
 
 const Page = () => {
 
-    
+    const [loading,setLoading] = useState(false)
     
     const router = useRouter();
     
@@ -46,7 +46,9 @@ const Page = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
          // Basic validation - check if form data is not empty
+         setLoading(true)
     if (!formData.password || !formData.email) {
+        setLoading(false)
         toast.error('Please fill in all required fields.');
         return;
     }
@@ -65,6 +67,7 @@ const Page = () => {
                 if (response.data.status === 200) {
                     toast.success(response.data.message);
                      // Set cookies using nookies
+                     setLoading(false)
                      const { access, refresh } = response.data.data.tokens;
                      const { name } = response.data.data.user;
                      
@@ -90,16 +93,19 @@ const Page = () => {
                     router.push('/')
                    
                 } else if (response.data.status === 400) {
+                    setLoading(false)
                     toast.error(response.data.message);
                 } else {
-                    
+                    setLoading(false)
                     toast.error('Login failed');
                 }
             } else {
                 // Registration failed, handle error
+                setLoading(false)
                  toast.error('Login failed');
             }
         } catch (error) {
+            setLoading(false)
             toast.error('Login failed:', error.message);
         }
     };
@@ -133,10 +139,10 @@ const Page = () => {
                         </div>
 
                         <div className='flex flex-col gap-4 items-center justify-start w-full'>
-                            <button className='w-full px-7 py-3 bg-blue-900 hover:bg-blue-700 duration-300 text-white rounded-lg font-poppins text-[16px] xll:text-[18px] font-medium tracking-wide'>Login</button>
+                            <button disabled={loading} className={`w-full px-7 py-3 hover:bg-blue-700 duration-300 text-white rounded-lg font-poppins text-[16px] xll:text-[18px] font-medium tracking-wide ${loading ? 'bg-blue-900 opacity-50'  : 'bg-blue-900'}`}>Login</button>
 
                             <p>Not Have Account <Link className='font-semibold hover:text-blue-900 text-green' href='/register'>Register </Link></p>
-                            <Link className='font-semibold hover:text-blue-900 text-green' href='/Forget-password'>Forget password</Link>
+                            <Link  className='font-semibold hover:text-blue-900 text-green' href='/Forget-password'>Forget password</Link>
                         </div>
                     </form>
                 </div>

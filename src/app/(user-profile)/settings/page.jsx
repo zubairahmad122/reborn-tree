@@ -2,15 +2,24 @@
 import LeftSideBar from '@/components/LeftSideBar'
 import { redirect } from "next/navigation";
 import { parseCookies } from 'nookies'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useUser } from '../../../../lib/UserConext';
 
-const page = () => {
+const Page = () => {
+    const userData = useUser();  
+    const [userInfor,setUserInfor] = useState({
+      name:userData?.data.name,
+      email:userData?.data.email,
+    })
+  
+  useEffect(() =>{
     const cookies = parseCookies();
 
-  const accessToken = cookies?.access_token;
-  if(!accessToken){
-    redirect('/login')
-  }
+    const accessToken = cookies?.access_token;
+    if(!accessToken){
+      redirect('/login')
+    }
+  },[])
 
 
     return (
@@ -36,11 +45,11 @@ const page = () => {
                                 </div>
                                 <div className='flex my-4 flex-col'>
                                     <label className='mb-1'>Full Name</label>
-                                    <input type="text" placeholder='full name' className='outline-none border-2 rounded-md shadow-lg border-[#443d3d82] px-4 py-2' />
+                                    <input onChange={(e) => setUserInfor({name:e.target.value})} value={userInfor?.name} type="text" placeholder='full name' className='outline-none border-2 rounded-md shadow-lg border-[#443d3d82] px-4 py-2' />
                                 </div>
                                 <div className='flex my-4 flex-col'>
                                     <label className='mb-1'>Email</label>
-                                    <input type="email" placeholder='Email' className='outline-none border-2 rounded-md shadow-lg border-[#443d3d82] px-4 py-2' />
+                                    <input value={userInfor?.email} readOnly type="email" placeholder='Email' className='outline-none border-2 rounded-md shadow-lg border-[#443d3d82] px-4 py-2' />
                                 </div>
                             </div>
 
@@ -81,4 +90,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
