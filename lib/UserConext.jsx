@@ -53,6 +53,9 @@ export const UserProvider = ({ children }) => {
     }, [accessToken]); // Fetch user data whenever access token changes
 
 
+    console.log(userData)
+
+
     return (
         <UserContext.Provider value={userData}>
             {children}

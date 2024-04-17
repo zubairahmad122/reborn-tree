@@ -14,6 +14,8 @@ import { loadStripe } from '@stripe/stripe-js';
 const MonthlyPlanting = ({ month }) => {
 
 
+
+
     const stripePromise = loadStripe('pk_test_51P04IEFuASpzJP3Vnfivb5m5sBP5kWHqovoCzBEd2dceKS0au8CwoyzkZ8buLf3S5VECNDl4JM8MXFpTTZvHhZ6j00QT355vjk');
 
     const router = useRouter()
@@ -28,9 +30,12 @@ const MonthlyPlanting = ({ month }) => {
 
 
     const handle = async () => {
+        setDiable(true)
       if(treeInp === 0){
         toast.error("Please select a tree plan");
+        setDiable(false)
       }else if(!accessToken){
+          setDiable(false)
         router.push('/login')
       }
       else{
@@ -52,6 +57,7 @@ const MonthlyPlanting = ({ month }) => {
             if (authenticatedResponse.status === 200) {
                 redirectToStripe(authenticatedResponse.data.data.id);
                 setStripeId(authenticatedResponse.data.data.id)
+                setDiable(false)
             } else {
                 // Handle error response
                 toast.error('Request failed');
@@ -60,6 +66,7 @@ const MonthlyPlanting = ({ month }) => {
             // Handle error
             toast.error('Request failed:', error.message);
             console.log(error)
+            setDiable(false)
         }
       }
     }

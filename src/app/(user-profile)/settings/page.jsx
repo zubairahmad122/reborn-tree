@@ -8,18 +8,24 @@ import { useUser } from '../../../../lib/UserConext';
 const Page = () => {
     const userData = useUser();  
     const [userInfor,setUserInfor] = useState({
-      name:userData?.data.name,
-      email:userData?.data.email,
-    })
-  
+        name:'',
+        email:'',
+      })
   useEffect(() =>{
     const cookies = parseCookies();
+
+    if(userData){
+        setUserInfor({
+            name:userData?.data.name,
+            email:userData?.data.email,
+        })
+       }
 
     const accessToken = cookies?.access_token;
     if(!accessToken){
       redirect('/login')
     }
-  },[])
+  },[userData])
 
 
     return (
