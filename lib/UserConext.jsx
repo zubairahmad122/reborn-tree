@@ -41,11 +41,11 @@ export const UserProvider = ({ children }) => {
                     setUserData(authenticatedResponse.data);
                 } else {
                     // Handle error response
-                    console.error('Request failed');
+                    // console.error('Request failed');
                 }
             } catch (error) {
                 // Handle error
-                console.error('Request failed:', error.message);
+                // console.error('Request failed:', error.message);
             }
         };
 
@@ -53,7 +53,6 @@ export const UserProvider = ({ children }) => {
     }, [accessToken]); // Fetch user data whenever access token changes
 
 
-    console.log(userData)
 
 
     return (

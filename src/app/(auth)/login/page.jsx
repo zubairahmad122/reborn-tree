@@ -93,15 +93,18 @@ const Page = () => {
                     router.push('/')
                    
                 } else if (response.data.status === 400) {
+                    console.log(response)
                     setLoading(false)
                     toast.error(response.data.message);
                 } else {
                     setLoading(false)
                     toast.error('Login failed');
+                    console.log(response)
                 }
             } else {
                 // Registration failed, handle error
                 setLoading(false)
+                console.log(response)
                  toast.error('Login failed');
             }
         } catch (error) {

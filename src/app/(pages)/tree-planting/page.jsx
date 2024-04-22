@@ -150,7 +150,7 @@ const page = () => {
 
 
           <motion.div initial={{ y: 200, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ type: 'tween', duration: 0.5 }} className={`flex gap-15 flex-col lg:flex-row my-20 items-center justify-center`}>
-            <Image src='/assets/images/tpp.jpg' width={300} height={200} alt='bussnessec2' loading='lazy' className=' rounded-lg w-full sm:w-[80%] mdd:w-[50%] h-auto' />
+            <Image src='/assets/images/tpp.jpg' width={700} height={500} alt='bussnessec2' loading='lazy' className=' rounded-lg w-full sm:w-[80%] mdd:w-[50%] h-auto' />
             <div className='  w-full mt-8 lg:mt-0 xsm:w-10/12 lg:flex-1  flex items-center justify-center flex-col'>
 
               <div className='w-full xsm:w-10/12 lg:flex-1 flex items-center text-center lg:text-start lg:items-start  justify-center flex-col'>
@@ -199,7 +199,7 @@ const page = () => {
           }
           </ul>
             </div>
-          <Image src='/assets/images/farmer.jpg' width={300} height={200} alt='bussnessec2' loading='lazy' className=' rounded-lg w-full sm:w-[80%] mdd:w-[50%] h-auto' />
+          <Image src='/assets/images/farmer.jpg' width={600} height={600} alt='bussnessec2' loading='lazy' className=' rounded-lg w-full sm:w-[80%] mdd:w-[50%] h-auto' />
           </motion.div>
 
       </section>
@@ -212,7 +212,7 @@ const page = () => {
 
 
           <motion.div initial={{ y: 200, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ type: 'tween', duration: 0.5 }} className={`flex gap-15 flex-col lg:flex-row my-20 items-center justify-center`}>
-            <Image src='/assets/images/bussnessmain.jpg' width={300} height={200} alt='bussnessec2' loading='lazy' className=' rounded-lg w-full sm:w-[80%] mdd:w-[50%] h-auto' />
+            <Image src='/assets/images/bussnessmain.jpg' width={600} height={600} alt='bussnessec2' loading='lazy' className=' rounded-lg w-full sm:w-[80%] mdd:w-[50%] h-auto' />
             <div className='  w-full mt-8 lg:mt-0 xsm:w-10/12 lg:flex-1  flex items-center justify-center flex-col'>
 
               <div className='w-full xsm:w-10/12 lg:flex-1 flex items-center text-center lg:text-start lg:items-start  justify-center flex-col'>
@@ -239,7 +239,7 @@ const page = () => {
                
               </div>
             </div>
-            <Image src='/assets/images/aboutmain.jpg' width={300} height={200} alt='bussnessec2' loading='lazy' className=' rounded-lg w-full sm:w-[80%] mdd:w-[50%] h-auto' />
+            <Image src='/assets/images/aboutmain.jpg' width={600} height={600} alt='bussnessec2' loading='lazy' className=' rounded-lg w-full sm:w-[80%] mdd:w-[50%] h-auto' />
           </motion.div>
 
           <div className='flex items-center gap-10 justify-center flex-col'>

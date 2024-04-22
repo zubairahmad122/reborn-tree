@@ -15,6 +15,9 @@ const Page = () => {
   const [disable, setDiable] = useState(false);
   const [name,setName] = useState('')
   const [userApi,setUserApi] = useState(null)
+  const [accessToken,setAccessToken] = useState(null)
+  const [isGenrateApi,setIsGenrateApi] = useState(false)
+  const [treePlanted,setTreePlanted] = useState(0)
 
   useEffect(() =>{
     const cookies = parseCookies();
@@ -23,10 +26,13 @@ const Page = () => {
     setName(name)
     if(userData){
       setUserApi(userData.data.api_key)
+      setIsGenrateApi(true)
     }
     const accessToken = cookies?.access_token;
     if(!accessToken){
       redirect('/login')
+    }else{
+      setAccessToken(accessToken)
     }
 
  if(userApi){
@@ -42,15 +48,17 @@ const Page = () => {
 
         if (response.ok) {
             const data = await response.json();
-            if(data.status !== '200'){
+            if(data.status !== 200){
               toast.error(data.message)
+              setDiable(false);
             }else{
-              toast.success(data.message)
+              setTreePlanted(data.data.tree_planted)      
+              setDiable(false);
             }
-            console.log(data)
-            setDiable(false);
-          } else {
           
+          } else {
+            
+            setDiable(false);
             toast.error('Request failed');
         }
     } catch (error) {
@@ -63,9 +71,10 @@ getTreeData()
  }
 
   
-  },[userData,userApi])
+  },[userData,userApi,isGenrateApi])
 
   const generateApi = async () => {
+    
     setDiable(true)
       try {
         
@@ -79,7 +88,8 @@ getTreeData()
 
         if (response.ok) {
             const data = await response.json();
-           toast.success(data.message)
+           setUserTree(data.tree_planted)           
+           setIsGenrateApi(true)
            setDiable(false);
           } else {
             // Handle error response
@@ -109,12 +119,12 @@ getTreeData()
 
           <div className='w-full flex flex-col gap-5 items-center justify-center'>
           <div style={{ backgroundImage: "url('/assets/images/treeplantmain.jpg')" }} className='bg-white w-[90%] flex relative items-center flex-col justify-center px-3 h-[300px] mt-4 shadow-2xl py-10 bg-cover bg-no-repeat rounded-xl '>
-                <h1 className='z-10 text-center leading-normal lg:leading-[50px] xll:leading-[60px] text-[25px] lg:text-[35px] xll:text-[45px] text-white font-medium font-worksans'>0 trees planted</h1>
+                <h1 className='z-10 text-center leading-normal lg:leading-[50px] xll:leading-[60px] text-[25px] lg:text-[35px] xll:text-[45px] text-white font-medium font-worksans'>{treePlanted} trees planted</h1>
 
                 <div className='absolute overflow-hidden rounded-xl z-0 top-0 left-0 w-full h-full bg-[#000] opacity-[0.4]'></div>
           </div>
           {
-            !userApi && 
+            !generateApi && 
             <div className='flex items-center justify-center w-full my-6'>
             <button disabled={disable} onClick={() => generateApi()}  className={` ${disable && 'opacity-50'} text-lg bg-secondary font-semibold hover:bg-green cursor-pointer px-4 py-3 rounded-lg text-white`}>Genrate a Key</button>
           </div>

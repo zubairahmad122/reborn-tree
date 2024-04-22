@@ -127,7 +127,7 @@ const ContactCom = () => {
             <main className='w-full  my-[20px] sm:my-[20px] h-full flex items-center justify-center flex-col mdd:flex-row gap-[60px] mx-auto'>
 
                 <div className=' w-full sm:w-10/12 mdd:flex-1'>
-                    <Image src='/assets/images/contacimg.png' loading='lazy' width={300} height={300} className='w-full h-auto' alt='contact image' />
+                    <Image src='/assets/images/contacimg.png' loading='lazy' width={600} height={600} className='w-full h-auto' alt='contact image' />
 
                 </div>
 

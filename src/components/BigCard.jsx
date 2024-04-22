@@ -8,7 +8,7 @@ const BigCard = ({img,title,text,btnLink,span}) => {
     <div className=" w-full xsm:w-[90%] flex items-start justify-between bg-white duration-500  md:w-[48%] xlg:w-[30%] xll:w-[30%] h-full rounded-xl shadow-lg hover:shadow-2xl border min-h-[610px]">
 
      <div className="gap-y-5  w-full h-full rounded-xl flex items-center justify-center flex-col  ">
-       <Image src={img} alt='card image' className='w-full' width={90} height={90} />
+       <Image src={img} alt='card image' className='w-full' width={200} height={200} />
        <div className='px-[20px]'>
          <h2 className=' text-dark text-[18px] xsm:text-[24px] font-worksans font-semibold'>{title}</h2>
          <p className=' text-[14px] tracking-wide leading-6 capitalize text-black-text font-poppins mt-3'>{text}</p>

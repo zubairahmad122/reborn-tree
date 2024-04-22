@@ -19,7 +19,7 @@ const ProjectsCard = ({icon,title,desc,btnLink,image,reverse}) => {
     </div>
 
 
-    <Image src={image} width={300} height={200} alt='bussnessec2' loading='lazy' className=' rounded-lg w-full sm:w-[80%] mdd:w-[50%] h-auto' />
+    <Image src={image} width={600} height={600} alt='bussnessec2' loading='lazy' className=' rounded-lg w-full sm:w-[80%] mdd:w-[50%] h-auto' />
 
 
 

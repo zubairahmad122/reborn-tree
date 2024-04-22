@@ -7,10 +7,6 @@ import { MdTravelExplore } from "react-icons/md";
 
 
 // Define metadata
-export const metadata = {
-  title: "Learn About Joyn Digital's Vision and Team | About Us",
-  description: "Learn about Joyn Digital's vision, mission, and dedicated team of experts. Explore our journey and commitment to delivering exceptional digital services.",
-};
 
 const sec2CardData = [
   {
@@ -45,7 +41,7 @@ const Page = () => {
 
   
 
-      <div style={{ backgroundImage: "url('/assets/images/aboutmain.jpg')" }} className=" my-[80px] bg-cover w-full px-[30px] lg:px-[60px] xll:px-[120px] py-[6rem] mx-auto">
+      <div style={{ backgroundImage: "url('/assets/images/aboutmain.jpg')" }} className=" mb-[80px] bg-cover w-full px-[30px] lg:px-[60px] xll:px-[120px] py-[6rem] mx-auto">
         <h3 className='  leading-normal text-center lg:leading-[70px] xll:leading-[80px] text-[30px] sm:text-[50px] lg:text-[60px] xll:text-[65px] text-white font-medium font-worksans'>About Us</h3>
       </div>
 

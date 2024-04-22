@@ -14,7 +14,7 @@ const BussnesCardReversed = ({title,desc,img}) => {
 
 
     <div className=' overflow-hidden rounded-tr-lg rounded-tl-lg  lg:rounded-tr-none lg:rounded-s-xl  w-full h-full relative sm:w-[80%] mdd:w-[60%]'>
-      <Image src={img} width={300} height={200} alt='bussnessec2' loading='lazy' className='w-full h-full' />
+      <Image src={img} width={600} height={600} alt='bussnessec2' loading='lazy' className='w-full h-full' />
       {/* <div className='w-full overflow-hidden  h-full absolute top-0 left-0 bg-black opacity-30 z-0'></div> */}
     </div>
 
