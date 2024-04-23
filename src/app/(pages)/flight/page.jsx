@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import React from "react";
 import { CiCalculator1, CiFlag1, CiMobile1 } from "react-icons/ci";
-import { FaHandHolding } from "react-icons/fa";
+import { FaGlobeAfrica, FaHandHolding, FaRegClock, FaTimes, FaTree } from "react-icons/fa";
 
 const GoalTimeLineData = [
   {
@@ -113,6 +113,7 @@ const page = () => {
         >
           <span className="font-bold text-[#14a800]">How it works</span>
         </motion.h1>
+   
 
         <div className="timeLine  relative w-full mx-auto bg-[#F3F4F9] py-[5rem] rounded-xl my-[100px]">
           {GoalTimeLineData?.map((item) => (
@@ -184,10 +185,11 @@ const page = () => {
                     className=" w-[50px]  object-cover h-auto"
                   />
                   <h3 className=" text-left  mb-[0px] font-sans text-[25px] xsm:text-[30px] xll:text-[30px] font-[500] text-green">
-                  Latex
+                    Latex
                   </h3>
                   <p className="leading-[30px] text-sm sm:text-[16px] font-normal  font-sans  text-black-text">
-                  Latex is a natural, renewable material derived from the rubber tree.
+                    Latex is a natural, renewable material derived from the
+                    rubber tree.
                   </p>
                 </div>
               </div>
@@ -195,6 +197,137 @@ const page = () => {
           </motion.div>
         </div>
       </section>
+
+    
+      <section className="bg-[#ffffff]">
+        <div className="w-full max-w-[1800px] my-[40px]   px-[30px] lg:px-[60px] xll:px-[120px] py-[2rem] mx-auto">
+          <motion.div
+            initial={{ y: 200, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ type: "tween", duration: 0.5 }}
+            className={`flex gap-15 flex-col lg:flex-row my-20 items-center justify-center`}
+          >
+            <div className="flex-1 flex items-start relative justify-center flex-col">
+              <h3 className=" text-left  mb-[0px] font-sans text-[25px] xsm:text-[30px] xll:text-[30px] font-[500] text-green">
+                Benefits of the Program
+              </h3>
+              <p className="leading-[30px] text-sm sm:text-[16px] font-normal  font-sans  text-black-text">
+                By providing convenient access to calculate and offset carbon
+                emissions, this initiative holds significant promise. With an
+                estimated 6 million individuals traveling by air daily, it
+                possesses the potential to make a substantial impact in
+                preserving the environment and combating climate change.
+              </p>
+            </div>
+
+
+            <div className="  w-full mt-8 lg:mt-0 xsm:w-10/12 lg:flex-1  flex items-center justify-center flex-col">
+              <div className="w-full xsm:w-10/12 lg:flex-1 shadow-xl rounded-lg py-5 px-2 flex items-start  justify-start flex-col">
+
+                {/* Acorian */}
+                <div className="collapse collapse-arrow bg-white">
+                  <input type="radio" name="my-accordion-2" defaultChecked />
+                  <div className="collapse-title mb-[0px] font-poppins text-[18px] xsm:text-[20px] font-semibold text-[#504545]">
+                  Flight Greener
+                  </div>
+                  <div className="collapse-content">
+                    <p>The program helps air travelers calculate and offset their flight emissions in less than a minute.</p>
+                  </div>
+                </div>
+                {/* Acorian */}
+                <div className="collapse collapse-arrow bg-white">
+                  <input type="radio" name="my-accordion-2" defaultChecked />
+                  <div className="collapse-title mb-[0px] font-poppins text-[18px] xsm:text-[20px] font-semibold text-[#504545]">
+                  Environmental Benefit                 </div>
+                  <div className="collapse-content">
+                    <p>By offsetting emissions, it contributes to preserving the environment and combating climate change.</p>
+                  </div>
+                </div>
+                {/* Acorian */}
+                <div className="collapse collapse-arrow bg-white">
+                  <input type="radio" name="my-accordion-2" defaultChecked />
+                  <div className="collapse-title mb-[0px] font-poppins text-[18px] xsm:text-[20px] font-semibold text-[#504545]">
+                  Support high-quality projects                 </div>
+                  <div className="collapse-content">
+                    <p>All carbon offsetting projects supported by RebornGreen are verified to the highest standards through the largest Carbon Certifications, including the Gold Standard Voluntary Emission Reductions (VER)</p>
+                  </div>
+                </div>
+             
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+  {/* section 5  */}
+      <section className='w-full flex items-center justify-start flex-col bg-white mt-10 max-w-[1800px] mb-[60px]  px-[30px] lg:px-[60px] xll:px-[120px] py-[4rem] mx-auto'>
+        <motion.div initial={{y:200}} viewport={{once:true}} whileInView={{y:0}} transition={{duration:0.5}} className='w-full flex flex-col items-center justify-center'>
+          <h1 className='text-center mb-[20px] font-poppins text-[30px] xsm:text-[40px] lg:text-[55px] xll:text-[60px] font-[500] text-[#3d3d3d]'> Data You Can  
+            <span className='font-bold text-[#14a800]'> Trust</span> 
+          </h1>
+          <p className=' mb-12 w-full xsm:w-[90%] leading-5 tracking-normal font-worksans mdd:w-[60%] text-center text-black-text text-sm xsm:text-[16px]'>Flight Emissions Calculator</p>
+        </motion.div>
+
+
+        {/* card 1   */}
+          
+        <motion.div initial={{y:200}} viewport={{once:true}} whileInView={{y:0}} transition={{duration:0.5}} className='flex items-center mt-6 justify-center gap-7 sm:gap-16 flex-wrap'>
+
+
+              {/* card 1   */}
+        <div className=" relative w-[340px] sm:w-[500px] hover:scale-110 duration-300 flex items-center justify-center flex-col text-center px-4 py-5 min-h-[200px] bg-secondary  z-10 rounded-xl">
+            <div className="thecard ">
+              <div className="front  gap-y-3 text-center rounded-xl flex items-center justify-center flex-col bg-[#f6f6f6] p-6">
+                {/* <Image src={img} alt='card image' width={60} height={60} /> */}
+                <div>
+                  <h2 className=" text-green text-[16px] xsm:text-[20px] font-worksans font-semibold">
+                    Accredited
+                  </h2>
+                  <p className=" text-[12px] xsm:text-sm text-earthy-brown">
+                    Accredited data and methodology, fully aligned with SHG
+                    Protocol and SBYI requirements.{" "}
+                  </p>
+                </div>
+              </div>
+              <div className="Flightbacked bg-secondary flex items-center justify-center rounded-xl p-4 ">
+                <p className=" text-[12px] xsm:text-[16px] xsm:text-sm text-black">
+                  Data from 30+ sources is now easily ingestible in a structured
+                  format, enriched with metadata such as validity year, source,
+                  CO2e calculation method, region, quality flags, and LCA
+                  activity.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* card 2  */}
+        <div className=" relative w-[340px] sm:w-[500px] hover:scale-110 duration-300 flex items-center justify-center flex-col text-center px-4 py-5 min-h-[200px] bg-sec  z-10 rounded-xl">
+            <div className="thecard ">
+              <div className="front  gap-y-3 text-center rounded-xl flex items-center justify-center flex-col bg-[#f6f6f6] p-6">
+              <FaRegClock size={30} className="text-green" />
+
+                <div>
+                  <h2 className=" text-green text-[16px] xsm:text-[20px] font-worksans font-semibold">
+                  Scientific
+                  </h2>
+                  <p className=" text-[12px] xsm:text-sm text-earthy-brown">Regularly updated data and methodologies, vetted by climate scientists.
+.{" "}
+                  </p>
+                </div>
+              </div>
+              <div className="Flightbacked bg-secondary flex items-center justify-center rounded-xl p-4 ">
+              <p className=" text-[12px] xsm:text-[16px] xsm:text-sm text-black">
+                Our data is verified through expert manual review and AI-driven outlier detection, audited by scientists, and overseen by a panel of respected environmental experts.
+                </p>
+              </div>
+            </div>
+          </div>
+
+         
+        </motion.div>
+          </section>
+
+
     </div>
   );
 };
