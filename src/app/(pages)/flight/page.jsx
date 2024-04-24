@@ -375,7 +375,7 @@ const page = () => {
         </div>
       </section>
 
-    {/* section 6  */}
+    {/* section 7  */}
       <section className="bg-[#ffffff]">
         <div className="w-full max-w-[1800px] my-[40px]   px-[30px] lg:px-[60px] xll:px-[120px] py-[2rem] mx-auto">
           <motion.div
