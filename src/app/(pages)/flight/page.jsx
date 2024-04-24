@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import React from "react";
 import { CiCalculator1, CiFlag1, CiMobile1 } from "react-icons/ci";
-import { FaGlobeAfrica, FaHandHolding, FaRegClock, FaTimes, FaTree } from "react-icons/fa";
+import { FaCalculator, FaGlobeAfrica, FaHandHolding, FaRegClock, FaTimes, FaTree } from "react-icons/fa";
 
 const GoalTimeLineData = [
   {
@@ -157,8 +157,8 @@ const page = () => {
               />
             </div>
             <div className="  w-full mt-8 lg:mt-0 xsm:w-10/12 lg:flex-1  flex items-center justify-center flex-col">
-              <div className="w-full xsm:w-10/12 lg:flex-1 flex items-start  justify-start flex-col">
-                <div>
+              <div className="w-full text-center lg:text-left   xsm:w-10/12 lg:flex-1 flex items-center lg:items-start  justify-center lg:justify-start flex-col">
+             
                   <Image
                     src="/assets/logos/ecofrendly.png"
                     width={200}
@@ -167,38 +167,38 @@ const page = () => {
                     loading="lazy"
                     className=" w-[50px]  object-cover h-auto"
                   />
-                  <h3 className=" text-left  mb-[0px] font-sans text-[25px] xsm:text-[30px] xll:text-[30px] font-[500] text-green">
+                  <h3 className="   mb-[0px] font-sans text-[25px] xsm:text-[30px] xll:text-[30px] font-[500] text-green">
                     Bamboo
                   </h3>
                   <p className="leading-[30px] text-sm sm:text-[16px] font-normal  font-sans  text-black-text">
                     Bamboo is a rapidly renewable resource that requires minimal
                     water and thrives without pesticides.
                   </p>
-                </div>
-                <div className="mt-5">
+                
+               
                   <Image
                     src="/assets/logos/hnd.png"
                     width={200}
                     height={200}
                     alt="bussnessec2"
                     loading="lazy"
-                    className=" w-[50px]  object-cover h-auto"
+                    className=" w-[50px] mt-5 object-cover h-auto"
                   />
-                  <h3 className=" text-left  mb-[0px] font-sans text-[25px] xsm:text-[30px] xll:text-[30px] font-[500] text-green">
+                  <h3 className=" mb-[0px] font-sans text-[25px] xsm:text-[30px] xll:text-[30px] font-[500] text-green">
                     Latex
                   </h3>
                   <p className="leading-[30px] text-sm sm:text-[16px] font-normal  font-sans  text-black-text">
                     Latex is a natural, renewable material derived from the
                     rubber tree.
                   </p>
-                </div>
+                
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-    
+      {/* section 4  */}
       <section className="bg-[#ffffff]">
         <div className="w-full max-w-[1800px] my-[40px]   px-[30px] lg:px-[60px] xll:px-[120px] py-[2rem] mx-auto">
           <motion.div
@@ -207,8 +207,8 @@ const page = () => {
             transition={{ type: "tween", duration: 0.5 }}
             className={`flex gap-15 flex-col lg:flex-row my-20 items-center justify-center`}
           >
-            <div className="flex-1 flex items-start relative justify-center flex-col">
-              <h3 className=" text-left  mb-[0px] font-sans text-[25px] xsm:text-[30px] xll:text-[30px] font-[500] text-green">
+            <div className="flex-1 flex text-center lg:text-left items-center lg:items-start relative justify-center flex-col">
+              <h3 className="   mb-[0px] font-sans text-[25px] xsm:text-[30px] xll:text-[30px] font-[500] text-green">
                 Benefits of the Program
               </h3>
               <p className="leading-[30px] text-sm sm:text-[16px] font-normal  font-sans  text-black-text">
@@ -326,6 +326,106 @@ const page = () => {
          
         </motion.div>
           </section>
+
+
+
+
+    {/* section 6  */}
+      <section className="bg-[#ffffff]">
+        <div className="w-full max-w-[1800px] my-[40px]   px-[30px] lg:px-[60px] xll:px-[120px] py-[2rem] mx-auto">
+          <motion.div
+            initial={{ y: 200, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ type: "tween", duration: 0.5 }}
+            className={`flex gap-15 flex-col lg:flex-row my-20 items-center lg:items-start justify-center`}
+          >
+       
+            <div className="  w-full mt-8 lg:mt-0 xsm:w-10/12 lg:flex-1 px-1 ssm:px-5 xsm:px-10 text-center lg:text-left  flex items-center lg:items-start justify-center flex-col">
+             
+                
+                
+                  <h3 className="   mb-[0px] font-sans text-[25px] xsm:text-[30px] xll:text-[30px] font-[500] text-dark">
+                  Calculate the Carbon Footprint of Your <span className="text-green">Flight
+                    </span> 
+                  </h3>
+                  <p className="leading-[30px] text-sm sm:text-[16px] font-normal  font-sans  text-black-text">
+                  Utilize RebornGreen's flight calculator to determine the carbon footprint of your flight and offset it by supporting environmentally beneficial initiatives.
+                  </p>
+
+                  <button className="border-none text-white rounded-sm hover:bg-secondary transition-all duration-500 outline-none px-5 hover:scale-95 py-5 my-6 bg-green flex items-center gap-2">
+                  Flight Emissions Calculator <FaCalculator />
+                  </button>
+               
+             
+            
+            </div>
+
+
+            <div className="flex-1 flex items-center relative justify-center">
+              <Image
+                src="/assets/images/airplaneimg.jpg"
+                width={600}
+                height={600}
+                alt="bussnessec2"
+                loading="lazy"
+                className=" rounded-lg w-full lg:w-[600px]  object-cover h-auto"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+    {/* section 6  */}
+      <section className="bg-[#ffffff]">
+        <div className="w-full max-w-[1800px] my-[40px]   px-[30px] lg:px-[60px] xll:px-[120px] py-[2rem] mx-auto">
+          <motion.div
+            initial={{ y: 200, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ type: "tween", duration: 0.5 }}
+            className={`flex gap-15 flex-col lg:flex-row my-20 items-center bg-secondary rounded-xl  justify-center`}
+          >
+       
+            <div className="  w-full mt-8 lg:mt-0 xsm:w-10/12 lg:flex-1 px-1 ssm:px-5 xsm:px-10 text-center lg:text-left  flex items-center lg:items-start justify-center flex-col">
+             
+                
+                
+                  <h3 className="   mb-[0px] font-sans text-[25px] xsm:text-[30px] xll:text-[30px] font-[500] text-[#fcfbfb]">
+                  Calculate the Carbon Footprint of Your <span className="text-white">Flight
+                    </span> 
+                  </h3>
+                  <p className="leading-[30px] text-sm sm:text-[16px] font-normal  font-sans  text-[#fcfbfb]">
+                  Utilize RebornGreen's flight calculator to determine the carbon footprint of your flight and offset it by supporting environmentally beneficial initiatives.
+                  </p>
+                 
+
+                  <button className="border-none text-white rounded-lg hover:bg-blue-700 transition-all duration-500 outline-none px-10  hover:scale-95 py-3 my-6 bg-blue-700 flex items-center gap-2">
+                  Buy Now
+                  </button>
+               
+             
+            
+            </div>
+
+            <div className="flex-1 flex items-center lg:items-start flex-col justify-center">
+              <Image
+                src="/assets/images/mob-sec1.png"
+                width={600}
+                height={600}
+                alt="bussnessec2"
+                loading="lazy"
+                className=" rounded-lg w-full lg:w-[400px]  object-cover h-auto sm:h-[450px]"
+              />
+               <p className="leading-[30px] py-10 text-sm sm:text-[16px] font-normal  font-sans  text-[#fcfbfb]">
+                  For bulk or corporate orders, please get in touch with us
+                  </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+
+
+
 
 
     </div>
