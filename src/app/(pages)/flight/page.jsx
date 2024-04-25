@@ -6,7 +6,7 @@ import Link from "next/link";
 
 import React from "react";
 import { CiCalculator1, CiFlag1, CiMobile1 } from "react-icons/ci";
-import { FaCalculator, FaGlobeAfrica, FaHandHolding, FaRegClock, FaTimes, FaTree } from "react-icons/fa";
+import { FaCalculator, FaHandHolding, FaRegClock } from "react-icons/fa";
 
 const GoalTimeLineData = [
   {
@@ -94,7 +94,7 @@ const page = () => {
                 </h3>
                 <p className="leading-[30px] text-sm sm:text-[15px]  font-sans  text-black-text">
                   Our first and unique project was created to reduce flight
-                  emissions.
+                  emissions{"."}
                 </p>
               </div>
             </div>
@@ -172,7 +172,7 @@ const page = () => {
                   </h3>
                   <p className="leading-[30px] text-sm sm:text-[16px] font-normal  font-sans  text-black-text">
                     Bamboo is a rapidly renewable resource that requires minimal
-                    water and thrives without pesticides.
+                    water and thrives without pesticides{"."}
                   </p>
                 
                
@@ -189,7 +189,7 @@ const page = () => {
                   </h3>
                   <p className="leading-[30px] text-sm sm:text-[16px] font-normal  font-sans  text-black-text">
                     Latex is a natural{","} renewable material derived from the
-                    rubber tree.
+                    rubber tree{"."}
                   </p>
                 
               </div>
@@ -213,10 +213,10 @@ const page = () => {
               </h3>
               <p className="leading-[30px] text-sm sm:text-[16px] font-normal  font-sans  text-black-text">
                 By providing convenient access to calculate and offset carbon
-                emissions{","} this initiative holds significant promise. With an
+                emissions{","} this initiative holds significant promise{"."} With an
                 estimated 6 million individuals traveling by air daily{","} it
                 possesses the potential to make a substantial impact in
-                preserving the environment and combating climate change.
+                preserving the environment and combating climate change{"."}
               </p>
             </div>
 
@@ -231,7 +231,7 @@ const page = () => {
                   Flight Greener
                   </div>
                   <div className="collapse-content">
-                    <p>The program helps air travelers calculate and offset their flight emissions in less than a minute.</p>
+                    <p>The program helps air travelers calculate and offset their flight emissions in less than a minute{"."}</p>
                   </div>
                 </div>
                 {/* Acorian */}
@@ -240,7 +240,7 @@ const page = () => {
                   <div className="collapse-title mb-[0px] font-poppins text-[18px] xsm:text-[20px] font-semibold text-[#504545]">
                   Environmental Benefit                 </div>
                   <div className="collapse-content">
-                    <p>By offsetting emissions{","} it contributes to preserving the environment and combating climate change.</p>
+                    <p>By offsetting emissions{","} it contributes to preserving the environment and combating climate change{"."}</p>
                   </div>
                 </div>
                 {/* Acorian */}
@@ -285,16 +285,16 @@ const page = () => {
                   </h2>
                   <p className=" text-[12px] xsm:text-sm text-earthy-brown">
                     Accredited data and methodology{","} fully aligned with SHG
-                    Protocol and SBYI requirements.
+                    Protocol and SBYI requirements{"."}
                   </p>
                 </div>
               </div>
               <div className="Flightbacked bg-secondary flex items-center justify-center rounded-xl p-4 ">
                 <p className=" text-[12px] xsm:text-[16px] xsm:text-sm text-black">
                   Data from 30+ sources is now easily ingestible in a structured
-                  format{","} enriched with metadata such as validity year{","} source,
+                  format{","} enriched with metadata such as validity year{","} source{","}
                   CO2e calculation method{","} region{","} quality flags{","} and LCA
-                  activity.
+                  activity{"."}
                 </p>
               </div>
             </div>
@@ -310,14 +310,14 @@ const page = () => {
                   <h2 className=" text-green text-[16px] xsm:text-[20px] font-worksans font-semibold">
                   Scientific
                   </h2>
-                  <p className=" text-[12px] xsm:text-sm text-earthy-brown">Regularly updated data and methodologies{","} vetted by climate scientists.
+                  <p className=" text-[12px] xsm:text-sm text-earthy-brown">Regularly updated data and methodologies{","} vetted by climate scientists{"."}
 .
                   </p>
                 </div>
               </div>
               <div className="Flightbacked bg-secondary flex items-center justify-center rounded-xl p-4 ">
               <p className=" text-[12px] xsm:text-[16px] xsm:text-sm text-black">
-                Our data is verified through expert manual review and AI-driven outlier detection{","} audited by scientists{","} and overseen by a panel of respected environmental experts.
+                Our data is verified through expert manual review and AI-driven outlier detection{","} audited by scientists{","} and overseen by a panel of respected environmental experts{"."}
                 </p>
               </div>
             </div>
@@ -349,7 +349,7 @@ const page = () => {
                     </span> 
                   </h3>
                   <p className="leading-[30px] text-sm sm:text-[16px] font-normal  font-sans  text-black-text">
-                  Utilize RebornGreen's flight calculator to determine the carbon footprint of your flight and offset it by supporting environmentally beneficial initiatives.
+                  Utilize RebornGreen's flight calculator to determine the carbon footprint of your flight and offset it by supporting environmentally beneficial initiatives{"."}
                   </p>
 
                   <button className="border-none text-white rounded-sm hover:bg-secondary transition-all duration-500 outline-none px-5 hover:scale-95 py-5 my-6 bg-green flex items-center gap-2">
@@ -394,7 +394,7 @@ const page = () => {
                     </span> 
                   </h3>
                   <p className="leading-[30px] text-sm sm:text-[16px] font-normal  font-sans  text-[#fcfbfb]">
-                  Utilize RebornGreen's flight calculator to determine the carbon footprint of your flight and offset it by supporting environmentally beneficial initiatives.
+                  Utilize RebornGreen's flight calculator to determine the carbon footprint of your flight and offset it by supporting environmentally beneficial initiatives{"."}
                   </p>
                  
 
