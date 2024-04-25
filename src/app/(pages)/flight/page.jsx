@@ -53,7 +53,7 @@ const page = () => {
           transition={{ duration: 0.5 }}
           className=" z-[1] leading-normal text-center text-[30px]  xll:text-[40px] text-white font-medium font-poppins"
         >
-          Project Create by Us, Supported by You, For Our Planet
+          Project Create by Us{","} Supported by You{","} For Our Planet
         </motion.h3>
 
         <div className="w-full h-full absolute top-0 left-0 bg-black opacity-20 z-0"></div>
@@ -188,7 +188,7 @@ const page = () => {
                     Latex
                   </h3>
                   <p className="leading-[30px] text-sm sm:text-[16px] font-normal  font-sans  text-black-text">
-                    Latex is a natural, renewable material derived from the
+                    Latex is a natural{","} renewable material derived from the
                     rubber tree.
                   </p>
                 
@@ -213,8 +213,8 @@ const page = () => {
               </h3>
               <p className="leading-[30px] text-sm sm:text-[16px] font-normal  font-sans  text-black-text">
                 By providing convenient access to calculate and offset carbon
-                emissions, this initiative holds significant promise. With an
-                estimated 6 million individuals traveling by air daily, it
+                emissions{","} this initiative holds significant promise. With an
+                estimated 6 million individuals traveling by air daily{","} it
                 possesses the potential to make a substantial impact in
                 preserving the environment and combating climate change.
               </p>
@@ -240,7 +240,7 @@ const page = () => {
                   <div className="collapse-title mb-[0px] font-poppins text-[18px] xsm:text-[20px] font-semibold text-[#504545]">
                   Environmental Benefit                 </div>
                   <div className="collapse-content">
-                    <p>By offsetting emissions, it contributes to preserving the environment and combating climate change.</p>
+                    <p>By offsetting emissions{","} it contributes to preserving the environment and combating climate change.</p>
                   </div>
                 </div>
                 {/* Acorian */}
@@ -249,7 +249,7 @@ const page = () => {
                   <div className="collapse-title mb-[0px] font-poppins text-[18px] xsm:text-[20px] font-semibold text-[#504545]">
                   Support high-quality projects                 </div>
                   <div className="collapse-content">
-                    <p>All carbon offsetting projects supported by RebornGreen are verified to the highest standards through the largest Carbon Certifications, including the Gold Standard Voluntary Emission Reductions (VER)</p>
+                    <p>All carbon offsetting projects supported by RebornGreen are verified to the highest standards through the largest Carbon Certifications{","} including the Gold Standard Voluntary Emission Reductions (VER)</p>
                   </div>
                 </div>
              
@@ -284,16 +284,16 @@ const page = () => {
                     Accredited
                   </h2>
                   <p className=" text-[12px] xsm:text-sm text-earthy-brown">
-                    Accredited data and methodology, fully aligned with SHG
-                    Protocol and SBYI requirements.{" "}
+                    Accredited data and methodology{","} fully aligned with SHG
+                    Protocol and SBYI requirements.
                   </p>
                 </div>
               </div>
               <div className="Flightbacked bg-secondary flex items-center justify-center rounded-xl p-4 ">
                 <p className=" text-[12px] xsm:text-[16px] xsm:text-sm text-black">
                   Data from 30+ sources is now easily ingestible in a structured
-                  format, enriched with metadata such as validity year, source,
-                  CO2e calculation method, region, quality flags, and LCA
+                  format{","} enriched with metadata such as validity year{","} source,
+                  CO2e calculation method{","} region{","} quality flags{","} and LCA
                   activity.
                 </p>
               </div>
@@ -310,14 +310,14 @@ const page = () => {
                   <h2 className=" text-green text-[16px] xsm:text-[20px] font-worksans font-semibold">
                   Scientific
                   </h2>
-                  <p className=" text-[12px] xsm:text-sm text-earthy-brown">Regularly updated data and methodologies, vetted by climate scientists.
-.{" "}
+                  <p className=" text-[12px] xsm:text-sm text-earthy-brown">Regularly updated data and methodologies{","} vetted by climate scientists.
+.
                   </p>
                 </div>
               </div>
               <div className="Flightbacked bg-secondary flex items-center justify-center rounded-xl p-4 ">
               <p className=" text-[12px] xsm:text-[16px] xsm:text-sm text-black">
-                Our data is verified through expert manual review and AI-driven outlier detection, audited by scientists, and overseen by a panel of respected environmental experts.
+                Our data is verified through expert manual review and AI-driven outlier detection{","} audited by scientists{","} and overseen by a panel of respected environmental experts.
                 </p>
               </div>
             </div>
@@ -416,7 +416,7 @@ const page = () => {
                 className=" rounded-lg w-full lg:w-[400px]  object-cover h-auto sm:h-[450px]"
               />
                <p className="leading-[30px] py-10 text-sm sm:text-[16px] font-normal  font-sans  text-[#fcfbfb]">
-                  For bulk or corporate orders, please get in touch with us
+                  For bulk or corporate orders please get in touch with us
                   </p>
             </div>
           </motion.div>

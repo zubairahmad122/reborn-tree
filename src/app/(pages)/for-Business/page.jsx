@@ -95,9 +95,6 @@ const page = () => {
               <p className='text-[16px] text-white font-worksans pt-2'>Choose what you want to offset through our carbon projects & track your impact</p>
             </Link>
         </motion.div>
-
-    
-
           </section>
       {/* section 1  */}
 

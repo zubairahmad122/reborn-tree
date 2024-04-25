@@ -55,7 +55,7 @@ const path = usePathname();
         <UserProvider>
 
 
-        {path === '/' || path === '/for-Business' || path === "/tree-planting" || path === '/Register' || path === "/Login" || path === "/Reset-password" || path === '/Forget-password' || path === '/about' || path === '/flight' ? <Navbar /> : <BgNavbar />}
+        {path === '/' || path === '/for-Business' || path === "/tree-planting" || path === '/Register' || path === "/Login" || path === "/Reset-password" || path === '/Forget-password' || path === '/about' || path === '/flight' || path === '/coffee' ? <Navbar /> : <BgNavbar />}
         <Toaster position="center-right" />
 
 
