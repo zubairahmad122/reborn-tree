@@ -199,7 +199,7 @@ const page = () => {
       </section>
 
       {/* section 4  */}
-      <section className="bg-[#ffffff]">
+      <section className="bg-[#f9f9f9]">
         <div className="w-full max-w-[1800px] my-[40px]   px-[30px] lg:px-[60px] xll:px-[120px] py-[2rem] mx-auto">
           <motion.div
             initial={{ y: 200, opacity: 0 }}
@@ -398,9 +398,14 @@ const page = () => {
                   </p>
                  
 
-                  <button className="border-none text-white rounded-lg hover:bg-blue-700 transition-all duration-500 outline-none px-10  hover:scale-95 py-3 my-6 bg-blue-700 flex items-center gap-2">
+                  <div className="flex items-center flex-wrap gap-2">
+                  <button className="border-none text-white rounded-lg hover:bg-white hover:text-black transition-all duration-500 outline-none px-10  hover:scale-95 py-3 my-6 bg-blue-700 flex items-center gap-2">
                   Buy Now
                   </button>
+                  <Link href={'/contact'} className="border-none text-black rounded-lg hover:text-white hover:bg-blue-700 transition-all duration-500 outline-none px-10  hover:scale-95 py-3 my-6 bg-white flex items-center gap-2">
+                  Contact us
+                  </Link>
+                  </div>
                
              
             
@@ -415,7 +420,7 @@ const page = () => {
                 loading="lazy"
                 className=" rounded-lg w-full lg:w-[400px]  object-cover h-auto sm:h-[450px]"
               />
-               <p className="leading-[30px] py-10 text-sm sm:text-[16px] font-normal  font-sans  text-[#fcfbfb]">
+               <p className="leading-[30px] text-center px-2 py-10 text-sm sm:text-[16px] font-normal  font-sans  text-[#fcfbfb]">
                   For bulk or corporate orders please get in touch with us
                   </p>
             </div>

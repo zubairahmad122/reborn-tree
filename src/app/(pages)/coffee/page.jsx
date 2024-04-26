@@ -71,13 +71,13 @@ const page = () => {
       </div>
 
       {/* section 1  */}
-      <section className="bg-[#ffffff]">
+      <section className="bg-[#f9f9f9]">
         <div className="w-full max-w-[1800px] my-[40px]   px-[30px] lg:px-[60px] xll:px-[120px] py-[2rem] mx-auto">
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ type: "tween", duration: 0.5 }}
-            className={`flex gap-15 flex-col lg:flex-row my-20 items-center justify-center`}
+            className={`flex gap-15 flex-col-reverse lg:flex-row my-20 items-center justify-center`}
           >
             <div className="flex-1 flex items-center justify-center">
               <Image
