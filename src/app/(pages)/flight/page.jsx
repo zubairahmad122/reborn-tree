@@ -402,9 +402,9 @@ const page = () => {
                   <button className="border-none text-white rounded-lg hover:bg-white hover:text-black transition-all duration-500 outline-none px-10  hover:scale-95 py-3 my-6 bg-blue-700 flex items-center gap-2">
                   Buy Now
                   </button>
-                  <Link href={'/contact'} className="border-none text-black rounded-lg hover:text-white hover:bg-blue-700 transition-all duration-500 outline-none px-10  hover:scale-95 py-3 my-6 bg-white flex items-center gap-2">
+                  {/* <Link href={'/contact'} className="border-none text-black rounded-lg hover:text-white hover:bg-blue-700 transition-all duration-500 outline-none px-10  hover:scale-95 py-3 my-6 bg-white flex items-center gap-2">
                   Contact us
-                  </Link>
+                  </Link> */}
                   </div>
                
              
@@ -421,7 +421,7 @@ const page = () => {
                 className=" rounded-lg w-full lg:w-[400px]  object-cover h-auto sm:h-[450px]"
               />
                <p className="leading-[30px] text-center px-2 py-10 text-sm sm:text-[16px] font-normal  font-sans  text-[#fcfbfb]">
-                  For bulk or corporate orders please get in touch with us
+                  For bulk or corporate orders please <Link href={'/contact'} className="font-bold text-white">get in touch</Link> with us
                   </p>
             </div>
           </motion.div>
