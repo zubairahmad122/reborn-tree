@@ -104,15 +104,12 @@ const page = () => {
 
       {/* Goal Time Line Section 2 */}
       <section className="w-full bg-[#f6f6f6] mt-10 max-w-[1800px] mb-[60px]  px-[30px] lg:px-[60px] xll:px-[120px] py-[4rem] mx-auto">
-        <motion.h1
-          initial={{ y: 200 }}
-          viewport={{ once: true }}
-          whileInView={{ y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-[20px] font-poppins text-[30px] xsm:text-[40px] lg:text-[55px] xll:text-[60px] font-[500] text-[#3d3d3d]"
-        >
-          <span className="font-bold text-[#14a800]">How it works</span>
-        </motion.h1>
+        <motion.div initial={{y:200}} viewport={{once:true}} whileInView={{y:0}} transition={{duration:0.5}} className='w-full flex flex-col items-center justify-center'>
+          <h1 className='text-center mb-[20px] font-poppins text-[30px] xsm:text-[40px] lg:text-[55px] xll:text-[60px] font-[500] text-[#3d3d3d]'>   
+            <span className='font-bold text-[#14a800]'> How it works</span> 
+          </h1>
+          <p className=' mb-12 w-full xsm:w-[90%] leading-5 tracking-normal font-worksans mdd:w-[60%] text-center text-black-text text-sm xsm:text-[16px]'>About the Luggage Tag</p>
+        </motion.div>
    
 
         <div className="timeLine  relative w-full mx-auto bg-[#F3F4F9] py-[5rem] rounded-xl my-[100px]">
@@ -132,6 +129,15 @@ const page = () => {
       {/* section 3  */}
       <section className="bg-[#ffffff]">
         <div className="w-full max-w-[1800px] my-[40px]   px-[30px] lg:px-[60px] xll:px-[120px] py-[2rem] mx-auto">
+        <motion.div initial={{y:200}} viewport={{once:true}} whileInView={{y:0}} transition={{duration:0.5}} className='w-full flex flex-col items-center justify-center'>
+          <h1 className='text-center mb-[20px] font-poppins text-[30px] xsm:text-[40px] lg:text-[50px]  font-[500] text-[#3d3d3d]'> Crafted from Sustainable   
+            <span className='font-bold text-[#14a800]'> Materials</span> 
+          </h1>
+         
+        </motion.div>
+        
+
+
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}

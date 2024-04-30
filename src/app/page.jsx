@@ -9,6 +9,7 @@ import dynamic from 'next/dynamic'
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import Script from 'next/script';
 import { FaRegCheckCircle } from 'react-icons/fa';
 
 
@@ -130,7 +131,7 @@ export default function Home() {
 
 
   <Head>
-     <script
+     <Script
       type="text/javascript"
       src="https://app.getterms.io/cookie-consent/embed/a7d1d92c-95c2-4a78-a59a-3eca424ee3a5"
     async />

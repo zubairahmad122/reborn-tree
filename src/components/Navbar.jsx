@@ -45,7 +45,7 @@ const Navbar = () => {
       destroyCookie(null, 'access_token', { path: '/' });
       destroyCookie(null, 'refresh_token', { path: '/' });
   
-      
+      setAccessToken(null)
       router.push('/login');
     };
 

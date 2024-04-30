@@ -36,7 +36,7 @@ const BgNavbar = () => {
       // Clear the access_token and refresh_token cookies
       destroyCookie(null, 'access_token', { path: '/' });
       destroyCookie(null, 'refresh_token', { path: '/' });
-  
+      setAccessToken(null)
       router.push('/login');
     };
   
