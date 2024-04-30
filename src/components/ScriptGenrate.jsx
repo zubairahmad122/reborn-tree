@@ -61,7 +61,7 @@ const ScriptGenrate = ({userApi}) => {
     <div className="flex items-center my-5 justify-center">
        {
         generatedScript !== "" ?  
-        <div className="w-full  h-[600px] relative">
+        <div className="w-full  h-[600px] rounded-xl relative">
             <textarea name="" value={generatedScript} className="bg-dark text-white w-full h-full resize-none overflow-hidden" id="" readOnly></textarea> 
             <p className="absolute cursor-pointer  flex gap-2 text-sm top-5 right-5 text-[#ceb2b2]" onClick={() => copyScript()}>
                 <FiCopy className="text-white" size={20} /> copy Code
