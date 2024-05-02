@@ -94,12 +94,11 @@ getTreeData()
         });
 
         if (response.ok) {
-            const data = await response.json();
-           setUserTree(data.tree_planted)           
+            const data = await response.json();        
            setIsGenrateApi(true)
            toast.success("Successfuly Genrate User Api")
            setDiable(false);
-           redirect('/user-profile')
+          //  redirect('/user-profile')
           } else {
             // Handle error response
             console.log(response)

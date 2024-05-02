@@ -39,13 +39,14 @@ export const UserProvider = ({ children }) => {
                 if (authenticatedResponse.status === 200) {
                     // Save user data to state
                     setUserData(authenticatedResponse.data);
+                    // console.log(authenticatedResponse.data) 
                 } else {
                     // Handle error response
                     // console.error('Request failed');
                 }
             } catch (error) {
                 // Handle error
-                // console.error('Request failed:', error.message);
+                console.error('Request failed:', error.message);
             }
         };
 
