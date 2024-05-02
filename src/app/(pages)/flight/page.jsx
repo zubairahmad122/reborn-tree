@@ -142,7 +142,7 @@ const page = () => {
             initial={{ y: 200, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ type: "tween", duration: 0.5 }}
-            className={`flex gap-15 flex-col lg:flex-row my-20 items-center justify-center`}
+            className={`flex gap-15 flex-col lg:flex-row lg:my-0 my-20 items-center justify-center`}
           >
             <div className="flex-1 flex items-center relative justify-center">
               <Image
