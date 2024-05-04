@@ -103,7 +103,7 @@ const ScriptGenrate = ({ userApi }) => {
         setGeneratedScript("");
       })
       .catch((error) => {
-        console.error("Failed to copy script:", error);
+        toast.error("Failed to copy script:", error);
       });
   };
 

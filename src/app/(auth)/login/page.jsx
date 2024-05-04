@@ -72,19 +72,19 @@ const Page = () => {
                      const { name } = response.data.data.user;
                      
                      setCookie(null, 'access_token', access.token, {
-                        maxAge: 60 * 60 * 24 , // 24 hours expiration
+                        maxAge: 12 * 60 * 60, // 12 hours expiration
                         path: '/',
                         sameSite:'lax',
                         httpOnly: false
                     });
                      setCookie(null, 'refresh_token', refresh.token, {
-                        maxAge: 60 * 60 * 24 * 7 , // 24 hours expiration
+                        maxAge: 30 * 24 * 60 * 60, // 30 days expiration
                         path: '/',
                         sameSite:'lax',
                         httpOnly: false
                     });
                      setCookie(null, 'user_name', name, {
-                        maxAge: 60 * 60 * 24  , // 24 hours expiration
+                        maxAge: 12 * 60 * 60, // 12 hours expiration
                         path: '/',
                         sameSite:'lax',
                         httpOnly: false
