@@ -99,7 +99,7 @@ const page = () => {
 <div className='w-full xsm:w-10/12 lg:flex-1 flex items-center text-center lg:text-start lg:items-start  justify-center flex-col'>
 
   <h3 className=' text-center lg:text-left mb-[20px] font-poppins text-[25px] xsm:text-[30px] lg:text-[35px] xll:text-[40px] font-[500] text-green'>Restore Madagascar&#39;s Beauty</h3>
-  <p className='leading-[30px] text-sm sm:text-[16px]  font-worksans tracking-wide text-black-text'>Madagascar, an island nation off the coast of Africa, is a global biodiversity hotspot . It is estimated to be home to around 5% of the world&#39;s biodiversity, with an incredible number of plant and animal species found nowhere else on Earth. This high level of endemism&apos; or species confined to a particular location &apos; makes Madagascar a truly unique and irreplaceable place.</p>
+  <p className='leading-[30px] text-sm sm:text-[16px]  font-worksans tracking-wide text-black-text'>Madagascar&apos; an island nation off the coast of Africa&apos; is a global biodiversity hotspot . It is estimated to be home to around 5% of the world&#39;s biodiversity&apos; with an incredible number of plant and animal species found nowhere else on Earth. This high level of endemism&apos; or species confined to a particular location &apos; makes Madagascar a truly unique and irreplaceable place.</p>
 </div>
 
 </div>
