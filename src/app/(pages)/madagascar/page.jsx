@@ -12,7 +12,7 @@ import TextCard from '@/components/TextCard'
 
 const textcardData = [
     {
-      image: '/assets/mdc/mdc1.jpg',
+      image: '/assets/mdc/mdc1.png',
       title: 'Unique and Vulnerable',
       text: 'Madagascar boasts exceptional biodiversity, with many species found nowhere else on Earth. Habitat loss is a major threat to this irreplaceable wildlife.',
       btnText: 'Explore Our Work',
@@ -26,7 +26,7 @@ const textcardData = [
       btnLink: "/"
     },
     {
-      image: '/assets/mdc/mdc3.jpeg',
+      image: '/assets/mdc/mdc3.png',
       title: 'Protecting Rare Forests',
       text: `Madagascar${"'"}s inland forests are irreplaceable for biodiversity. Restoration combats deforestation, safeguarding these unique ecosystems.`,
       btnText: 'About Us',
@@ -76,7 +76,7 @@ const page = () => {
     <div className='overflow-hidden h-full'>
 
 
-      <div style={{ backgroundImage: "url('/assets/mdc/Madagascarbg.jpg')" }} className=" flex-col   h-[95vh] flex items-center justify-center bg-cover w-full  px-[30px] relative lg:px-[60px] xll:px-[120px] py-[6rem] mx-auto">
+      <div style={{ backgroundImage: "url('/assets/mdc/mdcbanner.png')" }} className=" flex-col   h-[95vh] flex items-center justify-center bg-cover w-full  px-[30px] relative lg:px-[60px] xll:px-[120px] py-[6rem] mx-auto">
         <motion.h3 initial={{ y: 200 }} viewport={{ once: true }} whileInView={{ y: 0 }} transition={{ duration: 0.5 }} className=' z-[1] leading-normal text-center lg:leading-[70px] xll:leading-[80px] text-[30px] sm:text-[50px] lg:text-[60px] xll:text-[65px] text-white font-medium font-worksans'><span className='text-white'>Madagascar</span></motion.h3>
        
 
@@ -103,7 +103,7 @@ const page = () => {
 </div>
 
 </div>
-            <Image src='/assets/mdc/mdplanting.jpg' width={700} height={600} alt='bussnessec2' loading='lazy' className=' rounded-lg w-full sm:w-[80%] mdd:w-[50%] h-auto' />
+            <Image src='/assets/mdc/mdcsec1.jpg' width={700} height={600} alt='bussnessec2' loading='lazy' className=' rounded-lg w-full sm:w-[80%] mdd:w-[50%] h-auto' />
             
           </motion.div>
         </div>
@@ -119,7 +119,7 @@ const page = () => {
         <div className='flex gap-6 flex-wrap items-center justify-center'>
             {
                 textcardData?.map( (item, index) => (
-                    <div key={index} style={{ backgroundImage: `url(${item.image})` }}  className=" w-full xsm:w-[90%] flex items-end relative bg-cover bg-no-repeat justify-between  duration-500 hover:scale-110 md:w-[48%] xlg:w-[30%] xll:w-[30%] h-full rounded-xl shadow-lg border min-h-[520px]">
+                    <div key={index} style={{ backgroundImage: `url(${item.image})` }}  className=" w-full xsm:w-[90%] flex items-end relative bg-cover bg-center bg-no-repeat justify-between  duration-500 hover:scale-110 md:w-[48%] xlg:w-[30%] xll:w-[30%] h-full rounded-xl shadow-lg border min-h-[520px]">
   
                     <div className="gap-y-5 mb-20  relative z-20 text-center w-full h-full rounded-xl flex items-center justify-center flex-col  p-4">
                       <div>
